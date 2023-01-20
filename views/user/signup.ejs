@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head.ejs') %> 
+  </head>
+  <body>
+    <header class="navbar navbar-header navbar-header-fixed">
+        <a href="#" id="mainMenuOpen" class="burger-menu"><i data-feather="menu"></i></a>
+        <div class="navbar-brand">
+          <a href="../../index.html" class="df-logo">dash<span>forge</span></a>
+        </div><!-- navbar-brand -->
+        <div id="navbarMenu" class="navbar-menu-wrapper">
+          <div class="navbar-menu-header">
+            <a href="../../index.html" class="df-logo">dash<span>forge</span></a>
+            <a id="mainMenuClose" href=""><i data-feather="x"></i></a>
+          </div><!-- navbar-menu-header -->
+          <ul class="nav navbar-menu">
+            <li class="nav-label pd-l-20 pd-lg-l-25 d-lg-none">Main Navigation</li>
+            <li class="nav-item active"><a href="/user/signup" class="nav-link"><i data-feather="box"></i> Inscription</a></li>
+            <li class="nav-item"><a href="/user/signin" class="nav-link"><i data-feather="archive"></i> Connexion</a></li>
+          </ul>
+        </div><!-- navbar-menu-wrapper -->
+      </header><!-- navbar -->
+    <div class="content content-fixed content-auth">
+      <div class="container">
+        <div class="media align-items-stretch justify-content-center ht-100p pos-relative">
+          <div class="sign-wrapper mg-lg-l-50 mg-xl-l-60">
+            <div class="wd-100p">
+            <form action="/user/signup" method="post">
+                <h3 class="tx-color-01 mg-b-5">Inscription</h3>
+                <p class="tx-color-03 tx-16 mg-b-40">Créer un compte</p>
+                <div class="form-group">
+                  <label>username</label>
+                  <input type="text" name="username" id="username" class="form-control" placeholder="name">
+                </div>
+                <div class="form-group">
+                  <label>email</label>
+                  <input type="email" name="email" id="email" class="form-control" placeholder="yourname@yourmail.com">
+                </div>
+                <div class="form-group">
+                  <div class="d-flex justify-content-between mg-b-5">
+                    <label class="mg-b-0-f">Password</label>
+                  </div>
+                  <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password">
+                </div>
+                <button class="btn btn-brand-02 btn-block">Sign Up</button>
+              </form>
+            </div>
+          </div><!-- sign-wrapper -->
+        </div><!-- media -->
+      </div><!-- container -->
+    </div><!-- content -->
+    <%- include('./partials/footer.ejs') %> 
+  </body>
+</html>
